@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "singularName": "unit",
+    "pluralName": "units",
+    "displayName": "unit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "order": {
+      "type": "integer"
+    },
+    "details_slug": {
+      "type": "string"
+    },
+    "price_description": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

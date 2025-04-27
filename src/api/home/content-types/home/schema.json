@@ -1,0 +1,229 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "seo_title": {
+      "type": "string"
+    },
+    "seo_description": {
+      "type": "text"
+    },
+    "hero_heading": {
+      "type": "string"
+    },
+    "hero_subheading": {
+      "type": "string"
+    },
+    "hero_background_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "homes_subheading": {
+      "type": "string"
+    },
+    "homes_heading": {
+      "type": "string"
+    },
+    "homes_description": {
+      "type": "text"
+    },
+    "coastal_heading": {
+      "type": "string"
+    },
+    "coastal_content": {
+      "type": "string"
+    },
+    "coastal_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "location_heading": {
+      "type": "string"
+    },
+    "location_content": {
+      "type": "text"
+    },
+    "location_neighbourhood_heading": {
+      "type": "text"
+    },
+    "location_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "dev_overview_heading": {
+      "type": "string"
+    },
+    "dev_overview_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "features_subheading": {
+      "type": "string"
+    },
+    "features_heading": {
+      "type": "string"
+    },
+    "features_description": {
+      "type": "text"
+    },
+    "luxury_subheading": {
+      "type": "string"
+    },
+    "luxury_heading": {
+      "type": "string"
+    },
+    "luxury_description": {
+      "type": "text"
+    },
+    "luxury_essential_features_heading": {
+      "type": "text"
+    },
+    "luxury_optional_extras_heading": {
+      "type": "text"
+    },
+    "luxury_background_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "gallery_heading": {
+      "type": "string"
+    },
+    "investment_heading": {
+      "type": "string"
+    },
+    "investment_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "preapproval_heading": {
+      "type": "string"
+    },
+    "preapproval_subheading": {
+      "type": "string"
+    },
+    "enquire_heading": {
+      "type": "string"
+    },
+    "enquire_content": {
+      "type": "text"
+    },
+    "faq_heading": {
+      "type": "string"
+    },
+    "pricelist_heading": {
+      "type": "string"
+    },
+    "pricelist_content": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "hero_primary_button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.component-button"
+    },
+    "hero_info_points": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.component-list-item"
+    },
+    "coastal_button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.component-button"
+    },
+    "location_neighbourhood_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.component-list-item"
+    },
+    "features_cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.component-feature-card"
+    },
+    "luxury_essential_features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.component-list-item"
+    },
+    "luxury_optional_extras": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.component-list-item"
+    },
+    "investment_info_points": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.component-list-item"
+    },
+    "investment_button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.component-button"
+    },
+    "preapproval_button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.component-button"
+    }
+  }
+}

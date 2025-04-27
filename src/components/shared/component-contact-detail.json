@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_component_contact_details",
+  "info": {
+    "displayName": "ComponentContactDetail"
+  },
+  "options": {},
+  "attributes": {
+    "detail": {
+      "type": "text"
+    }
+  }
+}

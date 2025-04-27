@@ -1,53 +1,73 @@
-import type { Struct, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface SharedSlider extends Struct.ComponentSchema {
-  collectionName: 'components_shared_sliders';
+export interface SharedComponentButton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_component_buttons';
   info: {
-    displayName: 'Slider';
-    icon: 'address-book';
-    description: '';
+    displayName: 'ComponentButton';
   };
   attributes: {
-    files: Schema.Attribute.Media<'images', true>;
+    link: Schema.Attribute.String;
+    style: Schema.Attribute.Enumeration<['primary', 'secondary']>;
+    text: Schema.Attribute.String;
   };
 }
 
-export interface SharedSeo extends Struct.ComponentSchema {
-  collectionName: 'components_shared_seos';
+export interface SharedComponentContactDetail extends Struct.ComponentSchema {
+  collectionName: 'components_shared_component_contact_details';
   info: {
-    name: 'Seo';
-    icon: 'allergies';
-    displayName: 'Seo';
-    description: '';
+    displayName: 'ComponentContactDetail';
   };
   attributes: {
-    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    shareImage: Schema.Attribute.Media<'images'>;
+    detail: Schema.Attribute.Text;
   };
 }
 
-export interface SharedRichText extends Struct.ComponentSchema {
-  collectionName: 'components_shared_rich_texts';
+export interface SharedComponentFeatureCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_component_feature_cards';
   info: {
-    displayName: 'Rich text';
-    icon: 'align-justify';
-    description: '';
+    displayName: 'ComponentFeatureCard';
   };
   attributes: {
-    body: Schema.Attribute.RichText;
-  };
-}
-
-export interface SharedQuote extends Struct.ComponentSchema {
-  collectionName: 'components_shared_quotes';
-  info: {
-    displayName: 'Quote';
-    icon: 'indent';
-  };
-  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     title: Schema.Attribute.String;
-    body: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedComponentLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_component_links';
+  info: {
+    displayName: 'ComponentLink';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface SharedComponentListItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_component_list_items';
+  info: {
+    displayName: 'ComponentListItem';
+  };
+  attributes: {
+    item_text: Schema.Attribute.String;
+  };
+}
+
+export interface SharedComponentSitemapColumn extends Struct.ComponentSchema {
+  collectionName: 'components_shared_component_sitemap_columns';
+  info: {
+    description: '';
+    displayName: 'ComponentSitemapColumn';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    links: Schema.Attribute.Component<'shared.component-link', true>;
   };
 }
 
@@ -62,14 +82,71 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedQuote extends Struct.ComponentSchema {
+  collectionName: 'components_shared_quotes';
+  info: {
+    displayName: 'Quote';
+    icon: 'indent';
+  };
+  attributes: {
+    body: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedRichText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_rich_texts';
+  info: {
+    description: '';
+    displayName: 'Rich text';
+    icon: 'align-justify';
+  };
+  attributes: {
+    body: Schema.Attribute.RichText;
+  };
+}
+
+export interface SharedSeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seos';
+  info: {
+    description: '';
+    displayName: 'Seo';
+    icon: 'allergies';
+    name: 'Seo';
+  };
+  attributes: {
+    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    shareImage: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface SharedSlider extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sliders';
+  info: {
+    description: '';
+    displayName: 'Slider';
+    icon: 'address-book';
+  };
+  attributes: {
+    files: Schema.Attribute.Media<'images', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'shared.slider': SharedSlider;
-      'shared.seo': SharedSeo;
-      'shared.rich-text': SharedRichText;
-      'shared.quote': SharedQuote;
+      'shared.component-button': SharedComponentButton;
+      'shared.component-contact-detail': SharedComponentContactDetail;
+      'shared.component-feature-card': SharedComponentFeatureCard;
+      'shared.component-link': SharedComponentLink;
+      'shared.component-list-item': SharedComponentListItem;
+      'shared.component-sitemap-column': SharedComponentSitemapColumn;
       'shared.media': SharedMedia;
+      'shared.quote': SharedQuote;
+      'shared.rich-text': SharedRichText;
+      'shared.seo': SharedSeo;
+      'shared.slider': SharedSlider;
     }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_component_buttons",
+  "info": {
+    "displayName": "ComponentButton"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary"
+      ]
+    }
+  }
+}
