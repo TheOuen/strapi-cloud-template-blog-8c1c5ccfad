@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enquiries",
+  "info": {
+    "singularName": "enquiry",
+    "pluralName": "enquiries",
+    "displayName": "Enquiry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "budget": {
+      "type": "string"
+    },
+    "deposit": {
+      "type": "string"
+    },
+    "investorType": {
+      "type": "enumeration",
+      "enum": [
+        "First-time Buyer",
+        "Investor",
+        "Other"
+      ]
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}
